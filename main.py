@@ -27,8 +27,6 @@ def load_name_data():
 
 df = load_name_data()
 
-
-
 df['total_births'] = df.groupby(['year', 'sex'])['count'].transform('sum')
 df['prop'] = df['count'] / df['total_births']
 st.title('My Name App')
